@@ -6,6 +6,7 @@ function AdminPanel() {
   return (
     <>
         <Header/>
+      <h1>test</h1>
         <h2>{t('PAGESNAME.ADMIN')}</h2>
     </>
   )
