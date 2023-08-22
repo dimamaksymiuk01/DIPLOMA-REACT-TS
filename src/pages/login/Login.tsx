@@ -1,11 +1,12 @@
 import '../../components/style/loginPage.css'
-import {LoginCard} from "./Card.tsx";
+import {Card} from './Card.tsx'
+
 function Login() {
 
   return (
       <>
           <div className={'page'}>
-              <LoginCard/>
+              <Card/>
           </div>
       </>
   )

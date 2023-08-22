@@ -1,13 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getDatabase} from "firebase/database"
-import { API_BASE_URL } from '../config.ts'
+import { APIKEY } from '../config.ts'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: API_BASE_URL,
+  apiKey: APIKEY,
   authDomain: "ukrmobilservicenotes.firebaseapp.com",
   projectId: "ukrmobilservicenotes",
   storageBucket: "ukrmobilservicenotes.appspot.com",

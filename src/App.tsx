@@ -12,7 +12,6 @@ import { ROUTES } from './shared/types/enums.ts';
 
 import './App.css';
 import ErrorPage from './components/errorPage/errorPage.tsx'
-import { API_BASE_URL } from './services/config.ts'
 
 function App() {
   return (

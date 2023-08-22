@@ -1,55 +1,62 @@
 import LogoUkrMobil from '../../components/header/logoUkrMobil.tsx';
-import BtnLogin from './BtnLogin.tsx';
-import { useForm } from 'react-hook-form';
-import { FORM_FIELD, INPUT_FIELD } from '../../shared/types/enums.ts';
-import { EMPTY_STRING } from '../../shared/consts/defaultValues.ts';
-import { IAuthLogin } from '../../shared/types/interfaces.ts';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import '../../components/style/loginPage.css';
 
-export const LoginCard = () => {
 
-  const formLogin = useForm<IAuthLogin>({
-    defaultValues: {
-      [INPUT_FIELD.NAME]: EMPTY_STRING,
-      [INPUT_FIELD.PASSWORD]: EMPTY_STRING,
-    },
-    mode: 'onBlur',
-  });
+export const Card = () => {
+  const [selectedName, setSelectedName] = useState('');
 
-  const onSubmit = (data: IAuthLogin) => {
-    formLogin.reset()
-    console.log('Form login:', data);
+  const handleChange = (event: SelectChangeEvent) => {
+    setSelectedName(event.target.value);
   };
+
+  const handleName = () => {
+    console.log("Your name:", selectedName);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(selectedName));
+  }, [selectedName]);
 
   return (
     <>
-      <form onSubmit={formLogin.handleSubmit(onSubmit)}>
-        <div id="formWrapper">
-          <div className={'form'} id="form">
-            <LogoUkrMobil />
-            <div className="form-item">
-              <input
-                type={INPUT_FIELD.NAME}
-                placeholder={FORM_FIELD.NAME}
-                {...formLogin.register(INPUT_FIELD.NAME)}
-                className="form-style"
-              />
-            </div>
+      <div className={'formWrapper'} id="formWrapper">
+        <div className={'form'} id="form">
+          <LogoUkrMobil />
+          <div className={"formSelect"}>
+            <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+              <InputLabel id="demo-select-small-label">Name</InputLabel>
+              <Select
+                labelId="demo-select-small-label"
+                id="demo-select-small"
+                value={selectedName}
+                label="Name"
+                onChange={handleChange}
+              >
+                <MenuItem value={"Ivan"}>Ivan</MenuItem>
+                <MenuItem value={"Dima"}>Dima</MenuItem>
+                <MenuItem value={"Andriy"}>Andriy</MenuItem>
+              </Select>
+            </FormControl>
 
-            <div className="form-item">
-              <input
-                type={INPUT_FIELD.PASSWORD}
-                placeholder={FORM_FIELD.PASSWORD}
-                className="form-style"
-                {...formLogin.register(INPUT_FIELD.PASSWORD)}
-              />
-            </div>
-            <BtnLogin />
-
+            <Stack direction="row" spacing={2}>
+              <Link to="/markets">
+                <Button onClick={() => handleName()} variant="contained" color="success">
+                  Login
+                </Button>
+              </Link>
+            </Stack>
           </div>
         </div>
-      </form>
+      </div>
     </>
   );
 };
