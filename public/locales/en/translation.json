@@ -1,0 +1,25 @@
+{
+  "NAVMENU": {
+    "MARKETS": "markets",
+    "ARCHIVE": "archive",
+    "REPAIRS": "repairs",
+    "STORAGE": "storage",
+    "CLIENTLIST": "client list",
+    "ADMIN": "admin panel"
+  },
+  "PAGESNAME": {
+    "MARKETS": "markets",
+    "ARCHIVE": "archive",
+    "REPAIRS": "repairs",
+    "STORAGE": "storage",
+    "CLIENTLIST": "client list",
+    "ADMIN": "admin panel"
+  },
+    "ERROR": {
+      "NOTFOUND": "This page doesn't exist!",
+      "UNAUTHORIZED": "You aren't authorized to see this",
+      "UNAVILABLE": "Looks like our API is down"
+  }
+}
+
+

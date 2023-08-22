@@ -1,0 +1,154 @@
+.logoLogin {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+a {
+  color: #58bff6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #aaa;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+div.logo {
+  text-align: center;
+  margin: 20px;
+  fill: #566375;
+}
+
+div.logo svg {
+  width: 180px;
+  height: 100px;
+}
+
+.logo-active {
+  fill: #44aacc !important;
+}
+
+#formWrapper {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.darken-bg {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Form Styles */
+div#form {
+  position: absolute;
+  width: 360px;
+  max-width: 90%;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.form-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+div.form-item span {
+  color: #58bff6;
+  cursor: pointer;
+}
+
+input {
+  transition: all 0.2s ease;
+}
+
+input.form-style {
+  color: #8a8a8a;
+  display: block;
+  width: 90%;
+  height: 44px;
+  padding: 5px 5%;
+  border: 1px solid #ccc;
+  border-radius: 27px;
+  background-color: #fff;
+  font-size: 105%;
+  letter-spacing: 0.8px;
+}
+
+div.form-item .form-style:focus {
+  outline: none;
+  border: 1px solid #58bff6;
+  color: #58bff6;
+}
+
+div.form-item p.formLabel {
+  position: absolute;
+  left: 26px;
+  top: 2px;
+  transition: all 0.4s ease;
+  color: #bbb;
+}
+
+.formTop {
+  top: -22px !important;
+  left: 26px;
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #58bff6;
+}
+
+.formStatus {
+  color: #8a8a8a;
+}
+
+input[type='submit'].login {
+  width: 112px;
+  height: 37px;
+  border-radius: 19px;
+  background-color: #55b1df;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+input[type='submit'].login:hover {
+  background-color: #fff;
+  border: 1px solid #55b1df;
+  color: #55b1df;
+  cursor: pointer;
+}
+
+input[type='submit'].login:focus {
+  outline: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.form img {
+  margin-left: 25px;
+  padding: 30px;
+}

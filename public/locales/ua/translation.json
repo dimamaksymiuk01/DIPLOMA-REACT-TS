@@ -1,0 +1,23 @@
+{
+  "NAVMENU": {
+    "MARKETS": "маркети",
+    "ARCHIVE": "архів",
+    "REPAIRS": "ремонти",
+    "STORAGE": "склад",
+    "CLIENTLIST": "список клієнтів",
+    "ADMIN": "адмін панель"
+  },
+  "PAGESNAME": {
+    "MARKETS": "маркети",
+    "ARCHIVE": "архів",
+    "REPAIRS": "ремонти",
+    "STORAGE": "склад",
+    "CLIENTLIST": "список клієнтів",
+    "ADMIN": "адмін панель"
+  },
+    "ERROR": {
+      "NOTFOUND": "Ця сторінка не існує!",
+      "UNAUTHORIZED": "Ви не маєте права переглядати це",
+      "UNAVILABLE": "Схоже, наш API не працює"
+  }
+}
