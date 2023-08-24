@@ -92,16 +92,11 @@ h2 {
     width: 113px;
   }
 
-  //img:nth-child(1) {
-  //  position: absolute;
-  //  top: 8px;
-  //  left: clamp(17.5rem, -2.322rem + 99.11vw, 45.313rem);
-  //  width: 30px;
-  //}
   .LogoutImg {
     position: absolute;
     left: clamp(17.5rem, -2.143rem + 98.21vw, 45rem);
     bottom: 2px;
+    top: 5px;
     img {
       width: 35px;
     }

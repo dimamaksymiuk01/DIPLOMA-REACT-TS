@@ -19,8 +19,8 @@ function NavigateDesktop() {
         <Link to={ROUTES.ARCHIVE}>{t('NAVMENU.ARCHIVE')}</Link>
         <Link to={ROUTES.REPAIRS}>{t('NAVMENU.REPAIRS')}</Link>
         <Link to={ROUTES.STORAGE}>{t('NAVMENU.STORAGE')}</Link>
-        <Link to={ROUTES.CLIENTLIST}>{t('NAVMENU.CLIENTLIST')}</Link>
-        <Link to={ROUTES.ADMIN}>{t('NAVMENU.ADMIN')}</Link>
+        {/*<Link to={ROUTES.CLIENTLIST}>{t('NAVMENU.CLIENTLIST')}</Link>*/}
+        {/*<Link to={ROUTES.ADMIN}>{t('NAVMENU.ADMIN')}</Link>*/}
         <div className="dot"></div>
       </nav>
 

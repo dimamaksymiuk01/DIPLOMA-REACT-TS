@@ -71,10 +71,9 @@ details[open] summary::after {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden;
   animation: closeMenu 300ms ease-in-out forwards;
-  padding-bottom: 16px;
 }
 
 .menu p {
