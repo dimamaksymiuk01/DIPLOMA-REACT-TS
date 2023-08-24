@@ -6,7 +6,6 @@ import {
   DatabaseReference,
 } from "firebase/database";
 
-
 export enum PathData {
   markets = "markets",
   archive = "archive",
@@ -14,7 +13,7 @@ export enum PathData {
 }
 export const setDataToFirebase = async (
   path: PathData,
-  data: any
+  data: any,
 ) => {
   try {
     const database = getDatabase();

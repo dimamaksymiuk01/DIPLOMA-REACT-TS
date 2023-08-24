@@ -1,65 +1,43 @@
-import { FC, forwardRef, useState } from 'react';
-import ShowPasswordIcon from '../../../public/icons/showPassword.svg';
-import HidePasswordIcon from '../../../public/icons/hidePassword.svg';
-import {IPropsInputGroup} from "../../shared/types/interfaces.ts";
-import styles from '../style/Input.module.scss';
-import classNames from "./classNames.ts";
-import { INPUT_FIELD } from '../../shared/types/enums.ts'
+import { FC } from "react";
+import { useFormContext } from "react-hook-form";
+import {IPropsInputGroup} from '../../shared/types/interfaces.ts'
 
-const InputGroup: FC<IPropsInputGroup> = forwardRef<HTMLInputElement, IPropsInputGroup>(
-  (
-    {
-      value,
-      type = 'text',
-      name,
-      id,
-      classNameInput,
-      classNameError,
-      classNameWrapper,
-      onChange,
-      errorMessage,
-      placeholder,
-      disabled,
-      // autoFocus = false,
-      ...otherProps
-    },
-    ref,
-  ) => {
-    const [showPassword, setShowPassword] = useState(false);
+const InputGroup: FC<IPropsInputGroup> = ({
+  children,
+  type = "text",
+  name,
+  id,
+  classNameInput,
+  classNameError, classNameInputWrapper,
+    classNameLabel,
+  onClick,
+  onChange,
+  field = "",
+  error,
+  placeholder,
+    label
+}) => {
+  const { register } = useFormContext() || {};
+  return (
+    <div className={classNameInputWrapper}>
 
-    const handleTogglePassword = () => {
-      setShowPassword(!showPassword);
-    };
-
-    return (
-      <div className={classNames(styles.inputWrapper, classNameWrapper)}>
+        {children}
         <input
-          value={value}
-          type={showPassword ? INPUT_FIELD.TEXT : type}
+          {...register?.(field)}
+          type={type}
           id={id}
-          className={classNames(styles.input, classNameInput, {
-            [styles.withError]: errorMessage,
-          })}
+          className={classNameInput}
           name={name}
           placeholder={placeholder}
+          onClick={onClick}
           onChange={onChange}
-          disabled={disabled}
-          ref={ref}
-          {...otherProps}
+
         />
-        {type === INPUT_FIELD.PASSWORD && (
-          <span className={styles.passwordToggle} onClick={handleTogglePassword}>
-            {showPassword ? <HidePasswordIcon /> : <ShowPasswordIcon />}
-          </span>
-        )}
-        {errorMessage && (
-          <p className={classNames(styles.errorMassage, classNameError)}>
-            {errorMessage}
-          </p>
-        )}
-      </div>
-    );
-  },
-);
+       <label className={classNameLabel} htmlFor={id}>{label}</label>
+        {error && <p className={classNameError}> {error} </p>}
+
+    </div>
+  );
+};
 
 export default InputGroup;

@@ -1,21 +1,21 @@
-import {INPUT_FIELD} from "./enums.ts";
-import {ChangeEvent} from "react";
+import { InputHTMLAttributes, ReactNode } from 'react'
 
-export interface IPropsInputGroup {
-  type?: INPUT_FIELD;
-  name?: string;
+export interface IPropsInputGroup extends InputHTMLAttributes<HTMLInputElement> {
+  children?: ReactNode;
+  type?: "text" | "number" | "email" | "password" | "checkbox" | "date";
+  name: string;
   id?: string;
-  value?: string;
-  className?: string;
   classNameInput?: string;
   classNameError?: string;
-  errorMessage?: string;
-  classNameWrapper?: string;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  classNameInputWrapper?: string;
+  onClick?: () => void;
+  onChange?: () => void;
+  field?: string;
+  error?: string;
   placeholder?: string;
-  disabled?: boolean;
+  label?: string
+  classNameLabel?: string;
 }
-
 export interface IAuthLogin {
   name: string;
   password: string;
@@ -24,3 +24,4 @@ export interface IAuthLogin {
 export interface Locale {
   title: string;
 }
+
