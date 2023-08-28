@@ -19,6 +19,18 @@
       "NOTFOUND": "This page doesn't exist!",
       "UNAUTHORIZED": "You aren't authorized to see this",
       "UNAVILABLE": "Looks like our API is down"
+  },
+    "MARKETS": {
+      "MASTER": "Master",
+      "MARKET": "Market",
+      "CLIENT": "Client",
+      "DEVICE": "Device",
+      "PRODUCT": "Product",
+      "DATE": "Date",
+      "COMMIT": "Commit",
+      "STATUS": "Status",
+      "ARRIVAL": "Arrival",
+      "RESERVED": "Reserved"
   }
 }
 

@@ -1,5 +1,6 @@
 import Header from "../../components/header/Header.tsx";
 import { SetForm } from './SetForm.tsx'
+import Table from './Table.tsx'
 
 export default function Markets() {
 
@@ -7,6 +8,7 @@ export default function Markets() {
     <>
       <Header />
       <SetForm/>
+      <Table/>
     </>
   );
 }

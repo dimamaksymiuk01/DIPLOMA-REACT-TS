@@ -21,7 +21,6 @@ return (
     {Object.keys(locales).map((locale) => (
       <button
         key={locale}
-        type="button"
         onClick={() => changeLanguage(locale)}
       >
         {locale === 'en' ? (

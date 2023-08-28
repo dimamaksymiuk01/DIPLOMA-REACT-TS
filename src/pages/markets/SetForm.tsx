@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-// import * as moment from 'moment'
 import { PathData, setDataToFirebase } from '../../services/firebase/writeDataToFirebase.ts'
 import { FormProvider, useForm } from 'react-hook-form'
 import InputGroup from '../../components/Input/Input.tsx'
@@ -7,13 +6,15 @@ import Stack from '@mui/material/Stack'
 import { Alert } from '@mui/material'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { schemaRegister } from '../../shared/consts/schemaRegister.ts'
-import { BasicModal } from './Modal.tsx'
-import ColorButtons from './ButtonM.tsx'
+import { BasicModal } from '../../components/Modal.tsx'
+import ColorButtons from '../../components/ButtonMarkets.tsx'
 import { defaultValues } from '../../shared/consts/defaultValues.ts'
-import { SelectMarket } from './Select.tsx'
-import moment from 'moment' // Імпорт Moment.js
-import '../../components/style/setForms.scss'
+import { SelectMarket } from '../../components/Select.tsx'
+import moment from 'moment'
 import { useFirebaseData } from '../../services/firebase/getDataFromFirebase.ts'
+
+import '../../components/style/setForms.scss'
+
 
 export const SetForm = () => {
     const [commit, setCommit] = useState("");
