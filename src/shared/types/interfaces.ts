@@ -25,3 +25,6 @@ export interface Locale {
   title: string;
 }
 
+export interface ISelectProps{
+    field: string;
+}

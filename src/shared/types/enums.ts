@@ -5,8 +5,6 @@ export enum ROUTES {
   ARCHIVE = '/archive',
   STORAGE = '/storage',
   REPAIRS = '/repairs',
-  ADMIN = '/admin',
-  CLIENTLIST = '/clientlist',
   NOTFOUND = '*',
 }
 

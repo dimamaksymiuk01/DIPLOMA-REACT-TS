@@ -9,9 +9,9 @@ import { schemaRegister } from '../../shared/consts/schemaRegister.ts'
 import { BasicModal } from '../../components/Modal.tsx'
 import ColorButtons from '../../components/ButtonMarkets.tsx'
 import { defaultValues } from '../../shared/consts/defaultValues.ts'
-import { SelectMarket } from '../../components/Select.tsx'
 import moment from 'moment'
 import { useFirebaseData } from '../../services/firebase/getDataFromFirebase.ts'
+import { Select } from '../../components/Select.tsx'
 
 import '../../components/style/setForms.scss'
 
@@ -29,7 +29,7 @@ export const SetForm = () => {
         await setDataToFirebase(PathData.markets, {...data, comment, master, currentDate}).then(() => {
             console.log("Done")
         })
-        // formRegister.reset()
+        formRegister.reset()
     };
 
     const formRegister = useForm({
@@ -52,7 +52,6 @@ export const SetForm = () => {
       }
     }, []);
 
-
     return (
         <>
             <FormProvider {...formRegister}>
@@ -61,16 +60,13 @@ export const SetForm = () => {
 
                         <div className={"textInputs"}>
 
-                            <SelectMarket field = {"market"} />
+                            <Select field={"market"} />
 
                             <div className={'inpValid'}>
                             <InputGroup
                                 type={"text"}
                                 name={"client"}
                                 placeholder="Client"
-                                classNameInput={"form__input"}
-                                classNameInputWrapper={"form__group"}
-                                classNameLabel={"form__label"}
                                 field={"client"}
                             />
                             {errors?.client && (<Stack className={'errAlert'} sx={{ width: '100%' }} spacing={2}><Alert severity="warning">{errors.client.message}</Alert></Stack>)}
@@ -81,9 +77,6 @@ export const SetForm = () => {
                                 type={"text"}
                                 name={"device"}
                                 placeholder="Device model"
-                                classNameInput={"form__input"}
-                                classNameInputWrapper={"form__group"}
-                                classNameLabel={"form__label"}
                                 field={"device"}
                             />
                             {errors?.device && (<Stack className={'errAlert'} sx={{ width: '100%' }} spacing={2}><Alert severity="warning">{errors.device.message}</Alert></Stack>)}
@@ -94,27 +87,27 @@ export const SetForm = () => {
                                 type={"text"}
                                 name={"product"}
                                 placeholder="Product"
-                                classNameInputWrapper={"form__group"}
-                                classNameInput={"form__input"}
-                                classNameLabel={"form__label"}
                                 field={"product"}
                             />
                             {errors?.product && (<Stack className={'errAlert'} sx={{ width: '100%' }} spacing={2}><Alert severity="warning">{errors.product.message}</Alert></Stack>)}
                             </div>
 
-                            <div className={'inpValid'}>
+                            <div className={'inpValidDate'}>
                             <InputGroup
                                 type={"date"}
                                 name={"date"}
-                                classNameInputWrapper={"form__group"}
-                                classNameInput={"waitDate"}
                                 field={"date"}
+                                className={'inpDate'}
                             />
+
                             {errors?.date && (<Stack className={'errAlert'} sx={{ width: '100%' }} spacing={2}><Alert severity="warning">{errors.date.message}</Alert></Stack>)}
                             </div>
                             <BasicModal onSubmit={setCommit}/>
+
+                            <ColorButtons/>
+
                         </div>
-                        <ColorButtons/>
+
                     </div>
 
                 </form>

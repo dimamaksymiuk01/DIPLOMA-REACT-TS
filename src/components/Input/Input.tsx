@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { useFormContext } from "react-hook-form";
-import {IPropsInputGroup} from '../../shared/types/interfaces.ts'
+import { IPropsInputGroup } from "../../shared/types/interfaces.ts";
+
+import "../style/input.css";
 
 const InputGroup: FC<IPropsInputGroup> = ({
   children,
@@ -8,34 +10,40 @@ const InputGroup: FC<IPropsInputGroup> = ({
   name,
   id,
   classNameInput,
-  classNameError, classNameInputWrapper,
-    classNameLabel,
+  classNameError,
+  classNameLabel,
   onClick,
   onChange,
   field = "",
   error,
-  placeholder,
-    label
+  label,
 }) => {
   const { register } = useFormContext() || {};
+
+  const shouldRenderLabel = type !== "date"; // Визначаємо, чи треба рендерити label
+
   return (
-    <div className={classNameInputWrapper}>
-
-        {children}
-        <input
-          {...register?.(field)}
-          type={type}
-          id={id}
-          className={classNameInput}
-          name={name}
-          placeholder={placeholder}
-          onClick={onClick}
-          onChange={onChange}
-
-        />
-       <label className={classNameLabel} htmlFor={id}>{label}</label>
-        {error && <p className={classNameError}> {error} </p>}
-
+    <div className={"group"}>
+      {children}
+      <input
+        {...register?.(field)}
+        type={type}
+        id={id}
+        className={classNameInput}
+        name={name}
+        onClick={onClick}
+        onChange={onChange}
+        required
+      />
+      <span className="highlight"></span>
+      <span className="bar"></span>
+      {shouldRenderLabel && (
+        <label className={classNameLabel} htmlFor={id}>
+          {label}
+          {name}
+        </label>
+      )}
+      {error && <p className={classNameError}> {error} </p>}
     </div>
   );
 };

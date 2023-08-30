@@ -5,6 +5,8 @@ import {FC, useState} from "react";
 import Fab from '@mui/material/Fab';
 import EditIcon from '@mui/icons-material/Edit';
 
+import './style/setForms.scss'
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -31,7 +33,6 @@ export const BasicModal:FC<IPropsBasicModal> = ({onSubmit}) => {
   }
   return (
     <div className={'boxModal'}>
-      {/*<Button onClick={handleOpen}>Commit</Button>*/}
         <Box sx={{ '& > :not(style)': { m: 1 } }}>
       <Fab onClick={handleOpen} color="secondary" aria-label="edit">
         <EditIcon />
@@ -44,7 +45,7 @@ export const BasicModal:FC<IPropsBasicModal> = ({onSubmit}) => {
         aria-describedby="modal-modal-description"
 
       >
-        <Box sx={style} className={"md"}>
+        <Box sx={style} className={"modal"}>
             <textarea className={"textArr"} name={"coment"} onChange={(event) => setComent(event.target.value)}/>
             <button  className={"btnCommit"} onClick={handClick} >Add commit</button>
         </Box>

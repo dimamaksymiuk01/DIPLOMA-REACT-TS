@@ -30,7 +30,8 @@
       "COMMIT": "Commit",
       "STATUS": "Status",
       "ARRIVAL": "Arrival",
-      "RESERVED": "Reserved"
+      "RESERVED": "Reserved",
+      "BTN": "Send"
   }
 }
 

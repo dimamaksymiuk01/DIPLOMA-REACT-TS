@@ -1,16 +1,72 @@
-.infoMarkets {
+.inpValidDate {
+  padding-bottom: 4px
+}
 
-  .buttonSend {
-    display: flex;
-    justify-content: center;
-  }
+.buttonSend {
+  display: flex;
+  justify-content: center;
+}
 
-  .textInputs {
+.textInputs {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  }
+  margin-top: 10px;
+}
 
+.inpValid {
+  position: relative;
+}
+
+.errAlert {
+  position: absolute;
+  margin-top: 1px;
+}
+
+.infoMarkets {
+  padding-bottom: 25px;
+}
+.inpValidDate {
+  .errAlert {
+  position: absolute;
+  margin-top: 1px;
+    width: 300px;
+}
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  textarea {
+    width: 300px;
+    padding: 7px;
+    min-height: 100px;
+    border-radius: 10px;
+  }
+}
+
+.btnCommit {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btnCommit:hover {
+  background-color: #45a049;
+}
+
+.btnCommit:active {
+  transform: scale(0.95);
+  background-color: #3e8e41;
 }
