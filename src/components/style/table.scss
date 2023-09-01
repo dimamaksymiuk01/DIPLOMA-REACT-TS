@@ -2,4 +2,103 @@
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+    tr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  text-align: center;
+    background-color: rgb(217, 224, 227);
+  border-radius: 10px;
+}
+
+thead th {
+  width: clamp(4.313rem, -1.671rem + 12.45vw, 10rem);
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    padding: 7px;
+}
+thead th:nth-child(1) {
+  min-width: 70px;
+}
+
+thead th:nth-child(2) {
+  min-width: 100px;
+}
+thead th:nth-child(6) {
+  min-width: clamp(8.125rem, 4.838rem + 6.84vw, 11.25rem);
+}
+///*коміт*/
+thead th:nth-child(7) {
+  width: 80px;
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+tbody tr {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+tbody td {
+  min-height: 50px;
+  width: clamp(4.313rem, -1.671rem + 12.45vw, 10rem);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  //padding: 7px;
+}
+
+tbody td:nth-child(1) {
+  min-width: 70px;
+}
+//
+tbody td:nth-child(2) {
+  min-width: 100px;
+}
+
+tbody td:nth-child(6) {
+  min-width: clamp(8.125rem, 4.838rem + 6.84vw, 11.25rem);;
+}
+///*коміт*/
+tbody td:nth-child(7) {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tbody tr:hover {
+  background-color: rgb(197, 204, 208);
+  border-radius: 10px;
+}
+
+.green {
+  background-color: springgreen;
+}
+.green:hover {
+  background-color: rgb(49, 244, 137);
+}
+
+.red {
+  background-color: rgba(255, 3, 3, 0.775);
+}
+.red:hover{
+  background-color: rgba(234, 36, 36, 0.883);
+}
+.yellow {
+  background-color: rgb(217, 224, 227);
+}
 }

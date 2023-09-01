@@ -70,3 +70,13 @@
   transform: scale(0.95);
   background-color: #3e8e41;
 }
+@media screen and (max-width: 1509px) {
+  .buttonSend {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 1427px) {
+  .boxModal {
+    margin-top: 35px;
+  }
+}

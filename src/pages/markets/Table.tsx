@@ -15,6 +15,7 @@ import { LoginFormTable } from '../../shared/types/types.ts'
 import { useTranslation } from 'react-i18next';
 
 import '../../components/style/table.scss'
+import MouseOverPopover from '../../components/Popover.tsx'
 
 
 const Table = () => {
@@ -102,7 +103,7 @@ const Table = () => {
                         <p>{t('MARKETS.RESERVED')}: {moment(currentDate).format("MMM Do YY")}</p>
                       </div>
                     </td>
-                    <td>{comment}</td>
+                    <td>{comment ? (<MouseOverPopover comment={comment} />) : null}</td>
                     <td>
                       <Tooltip title="Delete">
                         <IconButton onClick={() => handleDeleteWithInfo(key)}>
