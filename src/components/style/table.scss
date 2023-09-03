@@ -102,3 +102,14 @@ tbody tr:hover {
   background-color: rgb(217, 224, 227);
 }
 }
+
+
+
+@media screen and (max-width: 769px) {
+    .boxTable {
+      overflow-x: scroll;
+      display: flex;
+      justify-content: left;
+      padding-left: 5px;
+    }
+  }

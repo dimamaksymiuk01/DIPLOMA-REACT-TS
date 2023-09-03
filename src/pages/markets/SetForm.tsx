@@ -79,7 +79,7 @@ export const SetForm = () => {
                                 placeholder="Device model"
                                 field={"device"}
                             />
-                            {errors?.device && (<Stack className={'errAlert'} sx={{ width: '100%' }} spacing={2}><Alert severity="warning">{errors.device.message}</Alert></Stack>)}
+                            {errors?.device && (<Stack className={'errAlert'} sx={{ width: '100%' }} spacing={2}><Alert className={'test'} severity="warning">{errors.device.message}</Alert></Stack>)}
                             </div>
 
                             <div className={'inpValid'}>

@@ -18,6 +18,7 @@
 
 .inpValid {
   position: relative;
+  //padding-top: 15px;
 }
 
 .errAlert {
@@ -34,6 +35,7 @@
   margin-top: 1px;
     width: 300px;
 }
+
 }
 
 .modal {
@@ -74,9 +76,22 @@
   .buttonSend {
     margin-top: 35px;
   }
+    .errAlert {
+    display: block;
+    position: static;
+  }
 }
 @media screen and (max-width: 1427px) {
   .boxModal {
     margin-top: 35px;
   }
+  .textInputs {
+    margin-top: 25px;
+  }
 }
+
+@media screen and (max-width: 609px) {
+    .inpValid {
+      padding-top: 20px;
+    }
+  }

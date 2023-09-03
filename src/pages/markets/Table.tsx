@@ -13,9 +13,11 @@ import { avatarMap } from '../../shared/consts/picturesUrl.ts'
 import { deleteDataFromFirebase } from '../../services/firebase/deleteFromData.ts'
 import { LoginFormTable } from '../../shared/types/types.ts'
 import { useTranslation } from 'react-i18next';
+import ArchiveIcon from '@mui/icons-material/Archive';
+import MouseOverPopover from '../../components/Popover.tsx'
+
 
 import '../../components/style/table.scss'
-import MouseOverPopover from '../../components/Popover.tsx'
 
 
 const Table = () => {
@@ -59,6 +61,7 @@ const Table = () => {
     setInfoToArchive(key); // Викликаємо setInfoToArchive
     handleDelete(key); // Викликаємо handleDelete
   };
+
 
   return (
     <>
@@ -105,8 +108,13 @@ const Table = () => {
                     </td>
                     <td>{comment ? (<MouseOverPopover comment={comment} />) : null}</td>
                     <td>
-                      <Tooltip title="Delete">
+                      <Tooltip title="Archive">
                         <IconButton onClick={() => handleDeleteWithInfo(key)}>
+                          <ArchiveIcon className={"favoriteMasters"} />
+                        </IconButton>
+                      </Tooltip>
+                      <Tooltip title="Delete">
+                        <IconButton onClick={() => handleDelete(key)}>
                           <DeleteIcon className={"favoriteMasters"} />
                         </IconButton>
                       </Tooltip>
