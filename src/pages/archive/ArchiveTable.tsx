@@ -13,6 +13,9 @@ import { avatarMap } from '../../shared/consts/picturesUrl.ts'
 import { deleteDataFromFirebase } from '../../services/firebase/deleteFromData.ts'
 import { LoginFormTable } from '../../shared/types/types.ts'
 import { useTranslation } from 'react-i18next';
+import MouseOverPopover from '../../components/Popover.tsx'
+
+import '../../components/style/table.scss'
 
 export default function ArchiveTable() {
   const { t } = useTranslation();
@@ -43,7 +46,7 @@ export default function ArchiveTable() {
 
   return (
       <>
-        <div className='box'>
+      <div className='boxTable'>
         <table>
           <thead className={'theadMarkets'}>
             <tr>
@@ -65,9 +68,8 @@ export default function ArchiveTable() {
           <tbody className={'tbodyMarkets'}>
             {dataArchive
               ?.filter((item) => !selectedMaster || item.master === selectedMaster)
-              .sort((a, b) => moment(a.date).valueOf() - moment(b.date).valueOf())
-              .map(({ master, market, client, device, product, date, currentDate, comment, key }) => {
-
+              .sort((b, a) => moment(a.date).valueOf() - moment(b.date).valueOf())
+              .map(({ key, master, market, client, device, product, date, currentDate, comment }) => {
                 return (
                   <tr key={key}>
                     <td><Avatar alt="Remy Sharp" src={avatarMap[master]} /></td>
@@ -77,11 +79,11 @@ export default function ArchiveTable() {
                     <td>{product}</td>
                     <td>
                       <div>
-                        <p>Прибуття: {moment(date).format("MMM Do YY")}</p>
-                        <p>Замовлено: {moment(currentDate).format("MMM Do YY")}</p>
+                        <p>{t('MARKETS.ARRIVAL')}: {moment(date).format("MMM Do YY")}</p>
+                        <p>{t('MARKETS.RESERVED')}: {moment(currentDate).format("MMM Do YY")}</p>
                       </div>
                     </td>
-                    <td>{comment}</td>
+                    <td>{comment ? (<MouseOverPopover comment={comment} />) : null}</td>
                     <td>
                       <Tooltip title="Delete">
                         <IconButton onClick={() => handleDelete(key)}>
