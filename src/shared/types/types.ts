@@ -27,4 +27,5 @@ export type MyProducts = {
   amount?: string;
   price?: number;
   key: string;
+  name: string;
   };

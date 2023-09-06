@@ -73,9 +73,7 @@
   background-color: #3e8e41;
 }
 @media screen and (max-width: 1509px) {
-  .buttonSend {
-    margin-top: 35px;
-  }
+
     .errAlert {
     display: block;
     position: static;
@@ -87,6 +85,9 @@
   }
   .textInputs {
     margin-top: 25px;
+  }
+    .buttonSend {
+    margin-top: 35px;
   }
 }
 

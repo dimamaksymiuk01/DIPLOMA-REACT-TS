@@ -1,0 +1,57 @@
+.SetStorage {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .inputsStorageLine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .btnStorage {
+    margin-top: clamp(0.313rem, -0.058rem + 1.85vw, 1.563rem);
+  }
+}
+
+
+.tableStorage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .searchItems {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 20px;
+    .searchItemsbtn {
+      margin-top: 12px;
+    }
+  }
+  .tableStorageTb {
+    thead {
+      th {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+      }
+    }
+    tbody {
+      td {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+      }
+      tr:hover {
+        background-color: ghostwhite;
+      }
+
+    }
+  }
+}

@@ -31,7 +31,10 @@
       "STATUS": "Status",
       "ARRIVAL": "Arrival",
       "RESERVED": "Reserved",
-      "BTN": "Send"
+      "BTN": "Send",
+      "CATEGORY": "Category",
+      "AMOUNT": "Amount",
+      "PRICE": "Price"
   }
 }
 
