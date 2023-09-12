@@ -29,22 +29,30 @@ export const TableStorage = () => {
     });
   };
 
+
+
   const filter = () => {
-    const array: string = searchDirect;
-    const filteredItems: MyProducts[] = dataStorage.filter((item: MyProducts) => {
+    const array = searchDirect.toLowerCase().replace(/\s+/g, '');
+    const filteredItems = dataStorage.filter((item: MyProducts) => {
       const values = Object.values(item);
       return values.some((value) => {
         if (typeof value === 'string') {
-          return value.includes(array);
+          const formattedValue = value.toLowerCase().replace(/\s+/g, '');
+          return formattedValue.includes(array);
         }
         return false;
       });
     });
-
     setFilteredItems(filteredItems);
   };
 
-  React.useEffect(() => { //по дефолту через фільтр у нас табличка не грузить, тому ефект відмальовує її
+  const handleFilter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      filter();
+    }
+  };
+
+  React.useEffect(() => {
     setFilteredItems(dataStorage);
   }, [dataStorage]);
 
@@ -55,13 +63,13 @@ export const TableStorage = () => {
       <div className="group">
         <input type="text"
                onChange={(e) => setSearchDirect(e.target.value)}
+               onKeyDown={handleFilter}
                required
         />
         <span className="highlight"></span>
         <span className="bar"></span>
         <label>Search items</label>
       </div>
-      {/*<button onClick={filter}>search</button>*/}
         <Tooltip title="Search" className={'searchItemsbtn'}>
           <SearchIcon onClick={filter}></SearchIcon>
         </Tooltip>
