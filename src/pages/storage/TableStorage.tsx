@@ -9,11 +9,9 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useTranslation } from 'react-i18next';
-import TotalSum from '../../components/TotalSum.tsx'
+import { TotalSum } from '../../components/TotalSum.tsx'
 
 import '../../components/style/storage.scss'
-import Spent from '../../components/Spent.tsx'
-
 
 
 export const TableStorage = () => {
