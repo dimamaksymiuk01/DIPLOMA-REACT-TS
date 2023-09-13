@@ -9,15 +9,16 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useTranslation } from 'react-i18next';
+import TotalSum from '../../components/TotalSum.tsx'
 
 import '../../components/style/storage.scss'
+import Spent from '../../components/Spent.tsx'
 
 
 
 export const TableStorage = () => {
   const { t } = useTranslation();
   const dataStorage: MyProducts[] = useFirebaseData(PathData.storage);
-
   // пошуковий рядок
   const [searchDirect, setSearchDirect] = useState<string>('');
 
@@ -28,8 +29,6 @@ export const TableStorage = () => {
       //може бути виклик модалки
     });
   };
-
-
 
   const filter = () => {
     const array = searchDirect.toLowerCase().replace(/\s+/g, '');
@@ -74,6 +73,8 @@ export const TableStorage = () => {
           <SearchIcon onClick={filter}></SearchIcon>
         </Tooltip>
         </div>
+      <TotalSum/>
+      {/*<Spent/>*/}
 
       <div className={'tableStorageTb'}>
         <table>

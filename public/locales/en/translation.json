@@ -34,7 +34,8 @@
       "BTN": "Send",
       "CATEGORY": "Category",
       "AMOUNT": "Amount",
-      "PRICE": "Price"
+      "PRICE": "Price",
+      "BALANCE": "BALANCE"
   }
 }
 

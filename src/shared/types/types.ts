@@ -28,4 +28,5 @@ export type MyProducts = {
   price?: number;
   key: string;
   name: string;
+  item: number;
   };
