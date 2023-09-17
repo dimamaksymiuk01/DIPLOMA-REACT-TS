@@ -123,14 +123,14 @@ const handleDecrementAmount = (key: string | undefined) => {
                     <td>{product}</td>
                     <td>{category}</td>
                     <td className={"amount"}>
-                      <RemoveIcon onClick={() => handleDecrementAmount(key)} />
+                      <RemoveIcon className={'away'} onClick={() => handleDecrementAmount(key || "")} />
                       {amount}
-                      <AddIcon onClick={() => handleIncrementAmount(key)} />
+                      <AddIcon className={'add'} onClick={() => handleIncrementAmount(key)} />
                     </td>
                     <td>{price} $</td>
                     <td>
                       <Tooltip title="Delete">
-                        <IconButton onClick={() => handleDelete(key)}>
+                        <IconButton onClick={() => handleDelete(key || "")}>
                           <DeleteIcon />
                         </IconButton>
                       </Tooltip>
