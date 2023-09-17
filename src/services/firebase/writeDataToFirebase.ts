@@ -9,7 +9,8 @@ import {
 export enum PathData {
   markets = "markets",
   archive = "archive",
-  storage = "storage"
+  storage = "storage",
+  spent = "spent"
 }
 export const setDataToFirebase = async (
   path: PathData,

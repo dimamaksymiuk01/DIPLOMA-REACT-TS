@@ -26,7 +26,8 @@ export type MyProducts = {
   category?: string;
   amount?: string;
   price?: string; // Змінено на string
-  key: string;
-  name: string;
-  item: number;
+  key?: string;
+  name?: string;
+  item?: number;
+  spendSum?: number;
 };

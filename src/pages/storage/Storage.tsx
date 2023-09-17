@@ -1,6 +1,6 @@
 import Header from "../../components/header/Header.tsx";
-import { TableStorage } from './TableStorage.tsx'
 import SetStorage from './SetStorage.tsx'
+import TableStorage from './TableStorage.tsx'
 
 function Storage() {
 
