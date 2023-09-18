@@ -27,6 +27,7 @@ const TableStorage = () => {
     });
   };
 
+  console.log(dataStorage)
 
 
   //функції для додавання та віднімання кількості з amount

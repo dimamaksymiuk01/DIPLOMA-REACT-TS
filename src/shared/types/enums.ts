@@ -5,6 +5,7 @@ export enum ROUTES {
   ARCHIVE = '/archive',
   STORAGE = '/storage',
   REPAIRS = '/repairs',
+  TEST = '/test',
   NOTFOUND = '*',
 }
 
