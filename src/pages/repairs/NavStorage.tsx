@@ -1,10 +1,11 @@
-import '../../components/style/navStorage.scss';
 import React, { useState } from 'react';
 import Cutting from '../../components/Cutting.tsx';
 import Displays from '../../components/Displays.tsx';
 import Accumulators from '../../components/Accumulators.tsx';
 import Covers from '../../components/Covers.tsx';
 import Services from '../../components/Services.tsx';
+
+import '../../components/style/navStorage.scss';
 
 function NavStorage() {
   const [isCuttingVisible, setIsCuttingVisible] = useState(false);

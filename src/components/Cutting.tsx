@@ -1,10 +1,14 @@
+import BrendMenu from '../pages/repairs/BrendMenu.tsx'
+import CutingTable from '../pages/repairs/CuttingTable.tsx'
+
+import '../../src/components/style/menuRepairs.scss'
+
 function Cutting() {
   return (
-    <>
-			<div className={'NavStorage'}>
-				<h1>Вкладка з цінами на зрізки</h1>
-			</div>
-    </>
+    <div className={'cuting'}>
+			<BrendMenu/>
+			<CutingTable/>
+    </div>
   )
 }
 

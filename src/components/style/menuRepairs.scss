@@ -1,0 +1,29 @@
+.brendSVG {
+  img {
+    width: 22px;
+  }
+}
+
+.cuting {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  table {
+    margin-left: 20px;
+    thead {
+      th {
+        width: 140px;
+        border: 1px solid;
+        text-align: center;
+      }
+    }
+    tbody {
+      td {
+        width: 140px;
+        border: 1px solid;
+        text-align: center;
+      }
+    }
+  }
+}
