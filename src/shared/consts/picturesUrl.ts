@@ -8,7 +8,7 @@ export const ENGLISH:string = 'https://cdn1.iconfinder.com/data/icons/internatio
   export const avatarIvan = 'https://i.imgur.com/LHBEK2r.png';
   export const avatarDima = 'https://i.imgur.com/wyyq7aP.png';
   export const avatarAndriy = 'https://i.imgur.com/ETb7yYb.png';
-  export  const avatarMap: string = {
+  export  const avatarMap: any = {
     Ivan: avatarIvan,
     Dima: avatarDima,
     Andriy: avatarAndriy,
