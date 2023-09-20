@@ -37,11 +37,11 @@ function NavStorage() {
   return (
     <>
       <div className={'NavStorage'}>
-        <button className={"navSt"} onClick={() => handleButtonClick('Cutting')}>Зрізки</button>
-        <button className={"navSt"} onClick={() => handleButtonClick('Displays')}>Дисплеї</button>
-        <button className={"navSt"} onClick={() => handleButtonClick('Accumulators')}>Акумулятори</button>
-        <button className={"navSt"} onClick={() => handleButtonClick('Covers')}>Кришки</button>
-        <button className={"navSt"} onClick={() => handleButtonClick('Services')}>Послуги</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Cutting')}>Зрізки</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Displays')}>Дисплеї</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Accumulators')}>Акб</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Covers')}>Кришки</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Services')}>Послуги</button>
       </div>
       {isCuttingVisible && <Cutting />}
       {isDisplaysVisible && <Displays />}
