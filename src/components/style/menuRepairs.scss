@@ -8,7 +8,7 @@
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
   table {
     margin-left: 20px;
     thead {
@@ -26,4 +26,15 @@
       }
     }
   }
+}
+
+.rightRep{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .setRep {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
 }

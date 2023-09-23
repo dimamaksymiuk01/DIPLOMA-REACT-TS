@@ -8,26 +8,26 @@ import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useTranslation } from 'react-i18next'
 
-export default function CutingTable() {
+export default function CoversTable() {
   const { t } = useTranslation();
   const { selectedBrend } = useRepairsContext();
 
-  let databasePath = PathData.applecuting;
+  let databasePath = PathData.applecovers;
 
   if (selectedBrend === 'Samsung') {
-    databasePath = PathData.samsungcuting;
+    databasePath = PathData.samsungcovers;
   } else if (selectedBrend === 'Xiaomi') {
-    databasePath = PathData.xiaomicuting;
+    databasePath = PathData.xiaomicovers;
   } else if (selectedBrend === 'Redmi') {
-    databasePath = PathData.redmicuting;
+    databasePath = PathData.redmicovers;
   } else if (selectedBrend === 'Google') {
-    databasePath = PathData.googlecuting;
+    databasePath = PathData.googlecovers;
   } else if (selectedBrend === 'Oppo') {
-    databasePath = PathData.oppocuting;
+    databasePath = PathData.oppocovers;
   } else if (selectedBrend === 'Motorola') {
-    databasePath = PathData.motorolacuting;
+    databasePath = PathData.motorolacovers;
   } else if (selectedBrend === 'OnePlus') {
-    databasePath = PathData.onepluscuting;
+    databasePath = PathData.onepluscovers;
   }
 
   const dataCutting: MyProducts[] = useFirebaseData(databasePath);
@@ -40,16 +40,14 @@ export default function CutingTable() {
           <tr>
             <th>{t("REPAIRS.DEVICE")}</th>
             <th>{t("REPAIRS.PRICE")}</th>
-            <th>{t("REPAIRS.ADDITIONALLY")}</th>
           </tr>
         </thead>
         <tbody>
-          {dataCutting?.map(({ key, device, price, additionally }) => {
+          {dataCutting?.map(({ key, device, price }) => {
             return (
               <tr key={key}>
                 <td>{device}</td>
                 <td>{price}</td>
-                <td>{additionally}</td>
                 <td>
                   <Tooltip title="Delete">
                     <IconButton onClick={() => handleDelete(key || "")}>

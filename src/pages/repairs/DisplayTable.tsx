@@ -8,26 +8,26 @@ import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useTranslation } from 'react-i18next'
 
-export default function CutingTable() {
+export default function DisplayTable() {
   const { t } = useTranslation();
   const { selectedBrend } = useRepairsContext();
 
-  let databasePath = PathData.applecuting;
+  let databasePath = PathData.appledisplay;
 
   if (selectedBrend === 'Samsung') {
-    databasePath = PathData.samsungcuting;
+    databasePath = PathData.samsungdisplay;
   } else if (selectedBrend === 'Xiaomi') {
-    databasePath = PathData.xiaomicuting;
+    databasePath = PathData.xiaomidisplay;
   } else if (selectedBrend === 'Redmi') {
-    databasePath = PathData.redmicuting;
+    databasePath = PathData.redmiadisplay;
   } else if (selectedBrend === 'Google') {
-    databasePath = PathData.googlecuting;
+    databasePath = PathData.googledisplay;
   } else if (selectedBrend === 'Oppo') {
-    databasePath = PathData.oppocuting;
+    databasePath = PathData.oppodisplay;
   } else if (selectedBrend === 'Motorola') {
-    databasePath = PathData.motorolacuting;
+    databasePath = PathData.motoroladisplay;
   } else if (selectedBrend === 'OnePlus') {
-    databasePath = PathData.onepluscuting;
+    databasePath = PathData.oneplusdisplay;
   }
 
   const dataCutting: MyProducts[] = useFirebaseData(databasePath);

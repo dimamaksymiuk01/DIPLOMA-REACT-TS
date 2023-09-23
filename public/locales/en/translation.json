@@ -36,6 +36,12 @@
       "AMOUNT": "Amount",
       "PRICE": "Price",
       "BALANCE": "BALANCE"
+  },
+  "REPAIRS": {
+      "DEVICE": "Device",
+      "PRICE": "Price",
+      "ADDITIONALLY": "Additionally",
+      "SERVICES": "Services"
   }
 }
 

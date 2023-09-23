@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Cutting from '../../components/Cutting.tsx';
-import Displays from '../../components/Displays.tsx';
-import Accumulators from '../../components/Accumulators.tsx';
-import Covers from '../../components/Covers.tsx';
-import Services from '../../components/Services.tsx';
+import { useState } from 'react';
+import Cutting from './Cutting.tsx';
+import Displays from './Displays.tsx';
+import Accumulators from './Accumulators.tsx';
+import Covers from './Covers.tsx';
+import Services from './Services.tsx';
 
 import '../../components/style/navStorage.scss';
 
@@ -38,8 +38,8 @@ function NavStorage() {
     <>
       <div className={'NavStorage'}>
         <button className={"bubbly-button"} onClick={() => handleButtonClick('Cutting')}>Зрізки</button>
-        <button className={"bubbly-button"} onClick={() => handleButtonClick('Displays')}>Дисплеї</button>
         <button className={"bubbly-button"} onClick={() => handleButtonClick('Accumulators')}>Акб</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Displays')}>Дисплеї</button>
         <button className={"bubbly-button"} onClick={() => handleButtonClick('Covers')}>Кришки</button>
         <button className={"bubbly-button"} onClick={() => handleButtonClick('Services')}>Послуги</button>
       </div>

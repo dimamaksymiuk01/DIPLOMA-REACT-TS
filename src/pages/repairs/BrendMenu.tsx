@@ -6,15 +6,19 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import AppleIcon from '@mui/icons-material/Apple';
 import { SamsungSVG, XiaomiSVG, RedmiSVG, GoogleSVG, OppoSVG, MotorolaSVG, OneplusSVG } from '../../components/BrendLogotips.tsx';
+import { useRepairsContext } from './RepairsContext.tsx'
 
 import '../../components/style/menuRepairs.scss'
 
 // Використовуйте SamsungSVG та XiaomiSVG у вашому коді
 function BrendMenu() {
-	const handleListItemClick = (primary: string) => {
-    // Зберігаємо значення `primary` у локальному сховищі
-    localStorage.setItem('brend', primary);
-  };
+
+	  const { setSelectedBrend } = useRepairsContext();
+
+		const handleListItemClick = (primary: string) => {
+			setSelectedBrend(primary);
+		};
+
   return (
     <>
 				<Box sx={{ width: '100%', maxWidth: 180, bgcolor: 'background.paper' }}>

@@ -7,24 +7,26 @@ import Repairs from './pages/repairs/Repairs.tsx';
 import NotFound from './pages/notFound/NotFound.tsx';
 import { ROUTES } from './shared/types/enums.ts';
 import ErrorPage from './components/errorPage/errorPage.tsx'
+import { RepairsProvider } from './pages/repairs/RepairsContext.tsx'
 
 import './App.css';
 
+
 function App() {
   return (
-    <>
-      <Router>
+    <Router>
+      <RepairsProvider>
         <Routes>
-          <Route path={ROUTES.HOME} element={<Navigate to={ROUTES.LOGIN} />}/>
+          <Route path={ROUTES.HOME} element={<Navigate to={ROUTES.LOGIN} />} />
           <Route path={ROUTES.LOGIN} element={<Login />} />
-          <Route path={ROUTES.MARKETS} element={<Markets />} errorElement={<ErrorPage/>}/>
-          <Route path={ROUTES.ARCHIVE} element={<Archive />} errorElement={<ErrorPage/>}/>
-          <Route path={ROUTES.STORAGE} element={<Storage />} errorElement={<ErrorPage/>}/>
-          <Route path={ROUTES.REPAIRS} element={<Repairs />} errorElement={<ErrorPage/>}/>
-          <Route path={ROUTES.NOTFOUND} element={<NotFound />} errorElement={<ErrorPage/>}/>
+          <Route path={ROUTES.MARKETS} element={<Markets />} errorElement={<ErrorPage />} />
+          <Route path={ROUTES.ARCHIVE} element={<Archive />} errorElement={<ErrorPage />} />
+          <Route path={ROUTES.STORAGE} element={<Storage />} errorElement={<ErrorPage />} />
+          <Route path={ROUTES.REPAIRS} element={<RepairsProvider><Repairs /></RepairsProvider>} errorElement={<ErrorPage />} />
+          <Route path={ROUTES.NOTFOUND} element={<NotFound />} errorElement={<ErrorPage />} />
         </Routes>
-      </Router>
-    </>
+      </RepairsProvider>
+    </Router>
   );
 }
 

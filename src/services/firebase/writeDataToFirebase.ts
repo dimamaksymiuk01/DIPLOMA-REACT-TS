@@ -10,7 +10,44 @@ export enum PathData {
   markets = "markets",
   archive = "archive",
   storage = "storage",
-  spent = "spent"
+
+  applecuting = "applecuting",
+  samsungcuting = "samsungcuting",
+  xiaomicuting = "xiaomicuting",
+  redmicuting = "redmicuting",
+  googlecuting = "googlecuting",
+  oppocuting = "oppocuting",
+  motorolacuting = "motorolacuting",
+  onepluscuting = "onepluscuting",
+
+  appleaccumulator = "appleaccumulator",
+  samsungaccumulator = "samsungaccumulator",
+  xiaomiaccumulator = "xiaomiaccumulator",
+  redmiaccumulator = "redmiaccumulator",
+  googleaccumulator = "googleaccumulator",
+  oppoaccumulator = "oppoaccumulator",
+  motorolaaccumulator = "motorolaaccumulator",
+  oneplusaccumulator = "oneplusaccumulator",
+
+  appledisplay = "appledisplay",
+  samsungdisplay = "samsungdisplay",
+  xiaomidisplay = "xiaomidisplay",
+  redmiadisplay = "redmiadisplay",
+  googledisplay = "googledisplay",
+  oppodisplay = "oppodisplay",
+  motoroladisplay = "motoroladisplay",
+  oneplusdisplay = "oneplusdisplay",
+
+  applecovers = "applecovers",
+  samsungcovers = "samsungcovers",
+  xiaomicovers = "xiaomicovers",
+  redmicovers = "redmicovers",
+  googlecovers = "googlecovers",
+  oppocovers = "oppocovers",
+  motorolacovers = "motorolacovers",
+  onepluscovers = "onepluscovers",
+
+  services = "services"
 }
 export const setDataToFirebase = async (
   path: PathData,

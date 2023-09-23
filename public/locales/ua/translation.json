@@ -36,5 +36,10 @@
       "AMOUNT": "Кількість",
       "PRICE": "Ціна",
       "BALANCE": "БАЛАНС"
+  }, "REPAIRS": {
+      "DEVICE": "Пристрій",
+      "PRICE": "Ціна",
+      "ADDITIONALLY": "Додатково",
+      "SERVICES": "Послуга"
   }
 }

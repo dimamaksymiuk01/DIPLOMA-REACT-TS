@@ -30,4 +30,6 @@ export type MyProducts = {
   name?: string;
   item?: number;
   spendSum?: number;
+  additionally?: string;
+  services?:string;
 };
