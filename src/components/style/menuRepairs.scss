@@ -10,20 +10,35 @@
   justify-content: center;
   //align-items: center;
   table {
-    margin-left: 20px;
     thead {
       th {
-        width: 140px;
-        border: 1px solid;
         text-align: center;
       }
     }
+
     tbody {
+      tr {
+        height: 50px;
+      }
+      tr:hover {
+        font-weight: bold;
+      }
       td {
-        width: 140px;
-        border: 1px solid;
         text-align: center;
       }
+      td:nth-child(1) {
+        width: 200px;
+      }
+      td:nth-child(2) {
+        width: 150px;
+      }
+      td:nth-child(3) {
+        width: 150px;
+      }
+      .dltRep {
+        width: 30px;
+      }
+
     }
   }
 }
@@ -37,4 +52,7 @@
   gap: 10px;
   margin-top: 15px;
 }
+}
+.buttonSend {
+  margin-top: 20px;
 }

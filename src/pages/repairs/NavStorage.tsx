@@ -4,10 +4,13 @@ import Displays from './Displays.tsx';
 import Accumulators from './Accumulators.tsx';
 import Covers from './Covers.tsx';
 import Services from './Services.tsx';
+import { useTranslation } from 'react-i18next'
 
 import '../../components/style/navStorage.scss';
 
 function NavStorage() {
+  const { t } = useTranslation();
+
   const [isCuttingVisible, setIsCuttingVisible] = useState(false);
   const [isDisplaysVisible, setIsDisplaysVisible] = useState(false);
   const [isAccumulatorsVisible, setIsAccumulatorsVisible] = useState(false);
@@ -37,11 +40,11 @@ function NavStorage() {
   return (
     <>
       <div className={'NavStorage'}>
-        <button className={"bubbly-button"} onClick={() => handleButtonClick('Cutting')}>Зрізки</button>
-        <button className={"bubbly-button"} onClick={() => handleButtonClick('Accumulators')}>Акб</button>
-        <button className={"bubbly-button"} onClick={() => handleButtonClick('Displays')}>Дисплеї</button>
-        <button className={"bubbly-button"} onClick={() => handleButtonClick('Covers')}>Кришки</button>
-        <button className={"bubbly-button"} onClick={() => handleButtonClick('Services')}>Послуги</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Cutting')}>{t("REPAIRS.CUTTING")}</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Accumulators')}>{t("REPAIRS.DASPLAYS")}</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Displays')}>{t("REPAIRS.ACCUMULATORS")}</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Covers')}>{t("REPAIRS.COVERS")}</button>
+        <button className={"bubbly-button"} onClick={() => handleButtonClick('Services')}>{t("REPAIRS.SERVICES")}</button>
       </div>
       {isCuttingVisible && <Cutting />}
       {isDisplaysVisible && <Displays />}

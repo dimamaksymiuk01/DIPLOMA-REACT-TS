@@ -40,6 +40,11 @@
       "DEVICE": "Пристрій",
       "PRICE": "Ціна",
       "ADDITIONALLY": "Додатково",
-      "SERVICES": "Послуга"
+      "SERVICES": "Послуга",
+      "CUTTING": "Зрізки",
+      "DASPLAYS": "Дисплеї",
+      "ACCUMULATORS": "Акб",
+      "COVERS": "Кришки",
+      "SERVICES": "Послуги"
   }
 }

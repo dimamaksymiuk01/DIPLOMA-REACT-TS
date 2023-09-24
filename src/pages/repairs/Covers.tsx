@@ -1,6 +1,6 @@
 import BrendMenu from './BrendMenu.tsx'
-import CoversTable from './TableCovers.tsx'
-import SetRepairsCovers from './SetRepairsCovers.tsx'
+import SetRepairsCovers from './setRepairs/SetRepairsCovers.tsx'
+import CoversTable from './tables/CoversTable.tsx'
 
 function Covers() {
   return (

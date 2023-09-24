@@ -1,13 +1,13 @@
 import { useForm, FormProvider } from 'react-hook-form';
-import InputGroup from '../../components/Input/Input.tsx';
-import { setDataToFirebase, PathData } from '../../services/firebase/writeDataToFirebase.ts';
-import { MyProducts } from '../../shared/types/types.ts';
-import ColorButtons from '../../components/ButtonMarkets.tsx';
-import { useRepairsContext } from './RepairsContext.tsx'
+import InputGroup from '../../../components/Input/Input.tsx';
+import { setDataToFirebase, PathData } from '../../../services/firebase/writeDataToFirebase.ts';
+import { MyProducts } from '../../../shared/types/types.ts';
+import ColorButtons from '../../../components/ButtonMarkets.tsx';
+import { useRepairsContext } from '../RepairsContext.tsx'
 
-import '../../components/style/menuRepairs.scss'
+import '../../../components/style/menuRepairs.scss'
 
-export default function SetRepairsAccumulators() {
+export default function SetRepairsDisplay() {
   const { selectedBrend } = useRepairsContext();
   console.log(selectedBrend)
 
@@ -22,23 +22,22 @@ export default function SetRepairsAccumulators() {
         ...data,
       };
 
-      // Визначте шлях до бази даних на основі значення selectedBrend
-      let databasePath = PathData.appleaccumulator; // Значення за замовчуванням
+      let databasePath = PathData.appledisplay; // Значення за замовчуванням
 
       if (selectedBrend === 'Samsung') {
-        databasePath = PathData.samsungaccumulator;
+        databasePath = PathData.samsungdisplay;
       } else if (selectedBrend === 'Xiaomi') {
-        databasePath = PathData.xiaomiaccumulator;
+        databasePath = PathData.xiaomidisplay;
       } else if (selectedBrend === 'Redmi') {
-        databasePath = PathData.redmiaccumulator;
+        databasePath = PathData.redmiadisplay;
       } else if (selectedBrend === 'Google') {
-        databasePath = PathData.googleaccumulator;
+        databasePath = PathData.googledisplay;
       } else if (selectedBrend === 'Oppo') {
-        databasePath = PathData.oppoaccumulator;
+        databasePath = PathData.oppodisplay;
       } else if (selectedBrend === 'Motorola') {
-        databasePath = PathData.motorolaaccumulator;
+        databasePath = PathData.motoroladisplay;
       } else if (selectedBrend === 'OnePlus') {
-        databasePath = PathData.oneplusaccumulator;
+        databasePath = PathData.oneplusdisplay;
       }
 
       await setDataToFirebase(databasePath, newData);

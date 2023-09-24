@@ -1,6 +1,6 @@
 import BrendMenu from './BrendMenu.tsx'
-import CutingTable from './CuttingTable.tsx'
-import SetRepairsCuting from './SetRepairsCuting.tsx'
+import CutingTable from './tables/CuttingTable.tsx'
+import SetRepairsCuting from './setRepairs/SetRepairsCuting.tsx'
 
 import '../../components/style/menuRepairs.scss'
 

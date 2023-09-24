@@ -1,7 +1,7 @@
 
 import '../../components/style/menuRepairs.scss'
-import SetRepairsAccumulators from './SetRepairsAccumulators.tsx'
-import AccumulatorTable from './AccumulatorTable.tsx'
+import SetRepairsAccumulators from './setRepairs/SetRepairsAccumulators.tsx'
+import AccumulatorTable from './tables/AccumulatorTable.tsx'
 import BrendMenu from './BrendMenu.tsx'
 
 function Accumulators() {

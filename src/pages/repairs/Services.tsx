@@ -1,6 +1,5 @@
-import BrendMenu from './BrendMenu.tsx'
-import SetRepairsServices from './SetRepairsServices.tsx'
-import ServicesTable from './ServicesTable.tsx'
+import SetRepairsServices from './setRepairs/SetRepairsServices.tsx'
+import ServicesTable from './tables/ServicesTable.tsx'
 
 function Services() {
   return (

@@ -41,6 +41,11 @@
       "DEVICE": "Device",
       "PRICE": "Price",
       "ADDITIONALLY": "Additionally",
+      "SERVICES": "Services",
+      "CUTTING": "Cutting",
+      "DASPLAYS": "Displays",
+      "ACCUMULATORS": "Banks",
+      "COVERS": "Covers",
       "SERVICES": "Services"
   }
 }

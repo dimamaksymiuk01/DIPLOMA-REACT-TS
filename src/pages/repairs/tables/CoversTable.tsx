@@ -1,12 +1,15 @@
-import { useFirebaseData } from '../../services/firebase/getDataFromFirebase.ts';
-import { MyProducts } from '../../shared/types/types.ts';
-import { PathData } from '../../services/firebase/writeDataToFirebase.ts';
-import { useRepairsContext } from './RepairsContext.tsx'
-import { deleteDataFromFirebase } from '../../services/firebase/deleteFromData.ts'
+import { useFirebaseData } from '../../../services/firebase/getDataFromFirebase.ts';
+import { MyProducts } from '../../../shared/types/types.ts';
+import { PathData } from '../../../services/firebase/writeDataToFirebase.ts';
+import { useRepairsContext } from '../RepairsContext.tsx'
+import { deleteDataFromFirebase } from '../../../services/firebase/deleteFromData.ts'
 import Tooltip from '@mui/material/Tooltip'
 import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { useTranslation } from 'react-i18next'
+
+import '../../../components/style/menuRepairs.scss'
+
 
 export default function CoversTable() {
   const { t } = useTranslation();
@@ -48,7 +51,7 @@ export default function CoversTable() {
               <tr key={key}>
                 <td>{device}</td>
                 <td>{price}</td>
-                <td>
+                <td className={'dltRep'}>
                   <Tooltip title="Delete">
                     <IconButton onClick={() => handleDelete(key || "")}>
                       <DeleteIcon />

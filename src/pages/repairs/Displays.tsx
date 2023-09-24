@@ -1,6 +1,6 @@
 import BrendMenu from './BrendMenu.tsx'
-import SetRepairsDisplay from './SetRepairsDisplay.tsx'
-import DisplayTable from './DisplayTable.tsx'
+import SetRepairsDisplay from './setRepairs/SetRepairsDisplay.tsx'
+import DisplayTable from './tables/DisplayTable.tsx'
 
 function Displays() {
   return (

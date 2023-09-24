@@ -1,11 +1,11 @@
 import { useForm, FormProvider } from 'react-hook-form';
-import InputGroup from '../../components/Input/Input.tsx';
-import { setDataToFirebase, PathData } from '../../services/firebase/writeDataToFirebase.ts';
-import { MyProducts } from '../../shared/types/types.ts';
-import ColorButtons from '../../components/ButtonMarkets.tsx';
-import { useRepairsContext } from './RepairsContext.tsx'
+import InputGroup from '../../../components/Input/Input.tsx';
+import { setDataToFirebase, PathData } from '../../../services/firebase/writeDataToFirebase.ts';
+import { MyProducts } from '../../../shared/types/types.ts';
+import ColorButtons from '../../../components/ButtonMarkets.tsx';
+import { useRepairsContext } from '../RepairsContext.tsx'
 
-import '../../components/style/menuRepairs.scss'
+import '../../../components/style/menuRepairs.scss'
 
 export default function SetRepairsCovers() {
   const { selectedBrend } = useRepairsContext();
