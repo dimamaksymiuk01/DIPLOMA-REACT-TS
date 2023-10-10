@@ -35,6 +35,10 @@ For styling, we use SCSS along with the Material-UI library to achieve a visuall
 - Moment
 - Sass
 - Yup
+- i18next
+- Normalize.css
+- React-hook-form
+- React-router-dom
 
 ## My contacts:
 
